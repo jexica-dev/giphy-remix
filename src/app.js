@@ -7,10 +7,13 @@ const GIPHY_KEY = "XYuFRDRMdMVB9BgNLF6YhEAsyfbzXty5";
 const BASE_URL = `${DOMAIN_GIF}?api_key=${GIPHY_KEY}&q=`;
 const BASE_URL2 = `${DOMAIN_GIF2}?api_key=${GIPHY_KEY}&q=`;
 
+let TITLE_TEST;
+
 function createDropList(ghibliFilm) {
   if (ghibliFilm) {
     ghibliFilm.forEach((ghibliFilm) => {
       let titleGhibli = ghibliFilm.title;
+      TITLE_TEST = titleGhibli;
       let title = ghibliFilm.title.replace(/'+/g, "");
       let listElements = `
       <a onclick='renderGifs("${title}", )'
@@ -19,6 +22,7 @@ function createDropList(ghibliFilm) {
         .querySelector("#myDropdown")
         .insertAdjacentHTML("beforeend", listElements);
     });
+    console.log(TITLE_TEST);
   } else {
     null;
   }
@@ -126,9 +130,10 @@ async function renderGifs(title) {
 
   if (resGhibli) {
     let res = resGhibli.data;
-    // console.log(res);
+    console.log(res);
+    console.log(title);
     const ghibliFilm = res.forEach((el) => {
-      if (el.title == title) {
+      if (el.title.replace(/'+/g, "") == title) {
         console.log(el);
         createTxtObj(el);
         document.getElementById("myDropdown").classList.toggle("hide");
