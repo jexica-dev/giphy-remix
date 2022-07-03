@@ -1,0 +1,30 @@
+{
+  "name": "giphy-remix",
+  "version": "1.0.0",
+  "description": "## Giphy Remix",
+  "main": "searchbar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**",
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xicaz/giphy-remix.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xicaz/giphy-remix/issues"
+  },
+  "homepage": "https://github.com/xicaz/giphy-remix#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "nodemon": "^2.0.18"
+  }
+}

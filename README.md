@@ -2,13 +2,14 @@
 
 ## Giphy Remix
 
+[Deployed](https://website.com/)
 
 ## Project Description
 
 <!-- Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality. -->
 
 
-Experimenting the use of multiple API's from [Giphy](https://developers.giphy.com/), [Discogs](https://www.discogs.com/developers), and [Studio Ghibli](https://ghibliapi.herokuapp.com), this project is using vanilla HTML/CSS/JavaScript. Using JS's embedded Canvas and HTML Drag and Drop API, the project will add add Giphy's gifs of Ghibli characters onto the canvas.
+Experimenting the use of multiple external API's from [Giphy](https://developers.giphy.com/), [Discogs](https://www.discogs.com/developers), and [Studio Ghibli](https://ghibliapi.herokuapp.com), this project is using vanilla HTML/CSS/JavaScript. Using JS's embedded Canvas and HTML Drag and Drop API, the project will add Giphy's gifs of Ghibli characters onto the canvas.
 
 ## API and Data Sample
 
@@ -19,27 +20,26 @@ Experimenting the use of multiple API's from [Giphy](https://developers.giphy.co
 
 ## Wireframes
 
-
-
+![MVP Sketch](https://i.imgur.com/vssHzr4.png)
 
 
 
 #### MVP
 
-- Using Giphy's, Discog's, and Studio Ghibli's API to create a unique online, web experience.
-- Render the API data on the page and manipulate them.
-- Allow images to be dragged around using HTML Drag and Drop API, rendered on the Canvas (API).
+- Using Giphy's, Discog's, and Studio Ghibli's data to create a collage of dancing gifs of ghibli characters.
+- Using the Fetch API for fetching resources: HTTP Requests, Responses, and Headers, along with a fetch() method for initiating asynchronous resource requests. (communicate with servers through the HTTP protocol)
+- Render the API images on the page.
+- Allow gifs to be dragged around using HTML Drag and Drop API, rendered on the Canvas (API).
 
 #### PostMVP
 
-- Allow users to save a screenshot of the project.
+- Allow users to save an image of the project, host or save it online.
 
 
 ## Project Schedule
 
 <!-- This schedule will be used to keep track of your progress throughout the week and align with our expectations. -->
 
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 | Day      | Deliverable                                                     | Status   |
 | -------- | --------------------------------------------------------------- | -------- |
