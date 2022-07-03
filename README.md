@@ -6,15 +6,44 @@
 
 ## Project Description
 
-<!-- Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality. -->
 
+Experimenting the use of multiple external API's from [Giphy](https://developers.giphy.com/), and [Studio Ghibli](https://ghibliapi.herokuapp.com), this project is using vanilla HTML/CSS/JavaScript. 
 
-Experimenting the use of multiple external API's from [Giphy](https://developers.giphy.com/), [Discogs](https://www.discogs.com/developers), and [Studio Ghibli](https://ghibliapi.herokuapp.com), this project is using vanilla HTML/CSS/JavaScript. Using JS's embedded Canvas and HTML Drag and Drop API, the project will add Giphy's gifs of Ghibli characters onto the canvas.
 
 ## API and Data Sample
 
 ```
-     
+
+async function fetchGhibliData() {
+  try {
+    const url = BASE_URL3;
+    let response = await axios.get(url);
+    let data = response.data;
+    createDropList(data);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function createDropList(ghibliFilm) {
+  if (ghibliFilm) {
+    ghibliFilm.forEach((ghibliFilm) => {
+      let titleGhibli = ghibliFilm.title;
+
+      let title = ghibliFilm.title.replace(/'+/g, "");
+      let listElements = `
+      <a onclick='renderGifs("${title}", )'
+      id="drop-item">${titleGhibli}</a>`;
+      document
+        .querySelector("#myDropdown")
+        .insertAdjacentHTML("beforeend", listElements);
+    });
+  } else {
+    null;
+  }
+}
+
 
 ```
 
@@ -26,14 +55,15 @@ Experimenting the use of multiple external API's from [Giphy](https://developers
 
 #### MVP
 
-- Using Giphy's, Discog's, and Studio Ghibli's data to create a collage of dancing gifs of ghibli characters.
+- Using Giphy's and Studio Ghibli's data to create a collage of dancing gifs of ghibli characters.
 - Using the Fetch API for fetching resources: HTTP Requests, Responses, and Headers, along with a fetch() method for initiating asynchronous resource requests. (communicate with servers through the HTTP protocol)
-- Render the API images on the page.
-- Allow gifs to be dragged around using HTML Drag and Drop API, rendered on the Canvas (API).
+- Render the API images and Ghibli information on the page.
+
 
 #### PostMVP
 
 - Allow users to save an image of the project, host or save it online.
+- Using JS's embedded Canvas and HTML Drag and Drop API, the project will add Giphy's gifs of Ghibli characters onto the canvas.
 
 
 ## Project Schedule

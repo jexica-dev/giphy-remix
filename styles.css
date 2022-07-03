@@ -112,17 +112,18 @@ header {
 }
 
 .ghibli-container {
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: 500;
   z-index: 10;
   position: absolute;
   font-family: "Satoshi", sans-serif;
-  color: white;
+  color: #dee764;
   padding: 25px;
   /* width: 200px; */
-  top: 20vh;
+  top: 17vh;
   left: 5vw;
   width: 46vw;
-  background-color: rgba(0, 0, 0, 0.547);
+  /* background-color: rgba(255, 255, 255, 0.125); */
 }
 
 .gif-block {
@@ -218,14 +219,11 @@ button {
     margin: 0 auto;
   } */
   .ghibli-container {
-    font-size: 17px;
     z-index: -3;
     width: 75vw;
     position: absolute;
     font-family: "Satoshi", sans-serif;
-    color: white;
     padding: 25px;
     margin: 0 auto;
-    top: 15vh;
   }
 }
