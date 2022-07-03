@@ -49,7 +49,7 @@ function createDropList(ghibliFilm) {
 
 ## Wireframes
 
-![MVP Sketch](https://i.imgur.com/vssHzr4.png)
+![MVP Sketch](https://i.imgur.com/IPy24WE.png)
 
 
 
@@ -74,9 +74,9 @@ function createDropList(ghibliFilm) {
 | Day      | Deliverable                                                     | Status   |
 | -------- | --------------------------------------------------------------- | -------- |
 |  June 26 | Prompt / Wireframes / Priority Matrix / Timeframes              | Complete |
-|  June 26 | Pseudocode / actual code                                        | Complete |
-|  June 26 | Initial Clickable Model                                         | Complete |
-|  June 26 | MVP                                                             | Complete |
+|  June 27 | Pseudocode / actual code                                        | Complete |
+|  June 28 | Initial Clickable Model                                         | Complete |
+|  July 3  | MVP                                                             | Complete |
 
 
 

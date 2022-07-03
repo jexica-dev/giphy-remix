@@ -27,7 +27,6 @@ function createDropList(ghibliFilm) {
 
 function createTxtObj(ghibliFilm) {
   if (ghibliFilm) {
-    // console.log(ghibliFilm);
     let title = ghibliFilm.title;
     let body = ghibliFilm.description;
     let listElements = `
@@ -110,6 +109,7 @@ async function renderGifs(title) {
   const ghibliTitle1 = "ghibli " + title + " anime";
   const ghibliTitle2 = "ghibli " + title;
 
+  // clearing containers
   let gifContainer = document.querySelector("#gif-container");
   gifContainer.innerHTML = "";
 
@@ -119,16 +119,15 @@ async function renderGifs(title) {
   let textContainer = document.querySelector("#text-container");
   textContainer.innerHTML = "";
 
+  //  http requests
   const resSticky = await axios.get(`${BASE_URL2}${ghibliTitle2}`);
-
   const resGiphy = await axios.get(`${BASE_URL}${ghibliTitle1}`);
-
   const resGhibli = await axios.get(`${BASE_URL3}`);
+
+  // ghibli film http request
 
   if (resGhibli) {
     let res = resGhibli.data;
-    console.log(res);
-    console.log(title);
     const ghibliFilm = res.forEach((el) => {
       if (el.title.replace(/'+/g, "") == title) {
         console.log(el);
@@ -140,6 +139,7 @@ async function renderGifs(title) {
     console.log("loading!");
   }
 
+  // create containers holding gifs/stickies from giphy
   createStickyObj(resSticky.data.data);
   createGifObj(resGiphy.data.data);
 }
