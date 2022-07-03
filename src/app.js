@@ -3,7 +3,7 @@ const BASE_URL3 = `${DOMAIN_GHIBLI}`;
 
 const DOMAIN_GIF = "https://api.giphy.com/v1/gifs/search";
 const DOMAIN_GIF2 = "https://api.giphy.com/v1/stickers/search";
-const GIPHY_KEY = "XYuFRDRMdMVB9BgNLF6YhEAsyfbzXty5";
+const GIPHY_KEY = "l4dqjkCmxMMjTGsvOaKWsfCOTonKEIar";
 const BASE_URL = `${DOMAIN_GIF}?api_key=${GIPHY_KEY}&q=`;
 const BASE_URL2 = `${DOMAIN_GIF2}?api_key=${GIPHY_KEY}&q=`;
 
@@ -130,7 +130,6 @@ async function renderGifs(title) {
     let res = resGhibli.data;
     const ghibliFilm = res.forEach((el) => {
       if (el.title.replace(/'+/g, "") == title) {
-        console.log(el);
         createTxtObj(el);
         document.getElementById("myDropdown").classList.toggle("hide");
       }
