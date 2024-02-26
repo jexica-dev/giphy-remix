@@ -2,7 +2,7 @@
 
 ## Giphy Remix
 
-[Deployed](https://website.com/)
+[Deployed](https://jexica-dev.github.io/giphy-remix/)
 
 ## Project Description
 
