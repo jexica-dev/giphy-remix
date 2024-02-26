@@ -1,4 +1,4 @@
-const DOMAIN_GHIBLI = "https://ghibliapi.herokuapp.com/films/";
+const DOMAIN_GHIBLI = "https://ghibliapi.vercel.app/films";
 const BASE_URL3 = `${DOMAIN_GHIBLI}`;
 
 const DOMAIN_GIF = "https://api.giphy.com/v1/gifs/search";
@@ -11,7 +11,6 @@ function createDropList(ghibliFilm) {
   if (ghibliFilm) {
     ghibliFilm.forEach((ghibliFilm) => {
       let titleGhibli = ghibliFilm.title;
-
       let title = ghibliFilm.title.replace(/'+/g, "");
       let listElements = `
       <a onclick='renderGifs("${title}", )'
